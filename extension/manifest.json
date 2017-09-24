@@ -1,0 +1,20 @@
+{
+  "name": "ShareLikePro",
+  "short_name": "ShareLikePro",
+  "description": "Share you comments from Reddit and Hacker News Medium-style",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "content_scripts" : [{
+    "run_at" :"document_end",
+    "matches" : [
+      "https://www.reddit.com/r/*/comments/*",
+      "https://news.ycombinator.com/item*"
+    ],
+    "js" : ["main.js"]
+  }],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
