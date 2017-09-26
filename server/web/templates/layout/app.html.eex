@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Share comments from Reddit and HackerNews Medium-style">
+    <title>ShareLike.pro - Share comments from Reddit and HackerNews Medium-style</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+
+    <meta name="google-site-verification" content="nqxh0aEkMgfRrXdGX7k1Ln2jC7Z9CFdLU-IGw338SBI" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      * {
+        font-family: 'Raleway', sans-serif;
+      }
+      .landing-hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid #e6e6e6;
+        background: #ffffff;
+        background: -moz-linear-gradient(-45deg, #ffffff 0%, #f7f3f7 78%, #ffffff 100%);
+        background: -webkit-linear-gradient(-45deg, #ffffff 0%,#f7f3f7 78%,#ffffff 100%);
+        background: linear-gradient(135deg, #ffffff 0%,#f7f3f7 78%,#ffffff 100%);
+      }
+      .lead, li {
+        line-height: 1.7;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+           max-width: 970px;
+        }
+      }
+
+      .heart {
+        padding: 0 5px;
+      }
+      footer {
+        background-color: #f7f3f7;
+        border-top: 1px solid #e6e6e6;
+        padding: 15px 0 5px;
+        margin-top: 80px;
+      }
+
+      html, body {
+        margin:0;
+        padding:0;
+        height:100%;
+        color: #687581;
+      }
+
+      h1, h2, h3 {
+        color: #37474f;
+      }
+      a {
+        color: #008ee6;
+      }
+      a:hover, a:active {
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 46px;
+      }
+
+      h2 {
+        font-weight: normal;
+        font-family: 'Raleway', sans-serif;
+        padding: 10px;
+      }
+
+      .highlight {
+        background-color: #beecff;
+        padding: 2px;
+        border-radius: 3px;
+      }
+
+      .btn-success {
+        background-color: #1bd61b;
+        border-color: transparent;
+      }
+
+      .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:active:focus {
+        background-color: #37d626;
+        border-color: transparent;
+      }
+
+    </style>
+  </head>
+
+  <body>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <%= render @view_module, @view_template, assigns %>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

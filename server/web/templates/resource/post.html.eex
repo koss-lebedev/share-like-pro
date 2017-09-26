@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  <style>
+    .btn-success {
+      background-color: #1bc11b;
+    }
+
+    .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:active:focus {
+      background-color: #1bd61b;
+      border-color: transparent;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form method="post">
+    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token() %>">
+    <textarea placeholder="add a message (optional)" name="message" class="form-control" rows="5" maxlength="140"></textarea>
+    <p style="text-align: right; margin-top: 5px;">
+      <small id="counter" style="margin-right: 10px"></small><button type="submit" class="btn btn-success">Tweet</button>
+    </p>
+  </form>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  window.onload = function () {
+    var textarea = document.getElementsByTagName('textarea')[0],
+        counter = document.getElementById('counter');
+
+    function updateView() {
+      var size = textarea.value.length;
+      counter.innerText = "Remaining: " + (140 - size);
+    }
+
+    textarea.onkeyup = updateView;
+    updateView();
+  }
+</script>
+</body>
+</html>

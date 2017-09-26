@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .reddit-embed {
+            font: 28px Helvetica, arial, sans-serif;
+        }
+        .reddit-embed-content {
+            border-top: 1px solid gainsboro;
+            padding: 10px 15px 10px;
+        }
+        .reddit-embed-comment-body {
+            margin: 0;
+        }
+        h1 {
+          font-size: 1.28em;
+          line-height: 1.38em;
+          margin-top: 0.83em;
+          margin-bottom: 0.83em;
+        }
+        h2 {
+          font-size: 1.28em;
+          line-height: 1.38em;
+          margin-top: 0.83em;
+          margin-bottom: 0.83em;
+        }
+        h3 {
+          font-size: 1.14em;
+          line-height: 1.25em;
+          margin-top: 0.625em;
+          margin-bottom: 0.625em;
+        }
+        p, pre {
+            font-size: 1em;
+            line-height: 1.42857em;
+            margin: 7px 0;
+        }
+        a {
+          text-decoration: none;
+          color: #2798ff;
+        }
+        :not(pre)>code {
+          background-color: #ffffff;
+          border: 1px solid #e6e6de;
+        }
+        pre {
+            border: 1px solid #e6e6de;
+            background-color: #fcfcfb;
+            border-radius: 2px;
+            overflow: hidden;
+            padding: 5px;
+        }
+        .reddit-embed-header-img {
+            float: left;
+            display: inline-block;
+            margin-right: 10px;
+            width: 70px;
+            height: 70px;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            border-radius: 45px;
+        }
+        .reddit-embed-header {
+            font-size: 24px;
+            padding: 15px;
+        }
+        .reddit-embed-header-link-title {
+            color: black;
+        }
+        .reddit-embed-link-meta {
+            color: #6f6f6f;
+            margin: 5px 0 0 55px;
+        }
+        .reddit-embed-content-copyright {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 0.5em;
+            color: #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+<div class="reddit-embed">
+    <div class="reddit-embed-header">
+        <img src="<%= @image %>" class="reddit-embed-header-img">
+        <span class="reddit-embed-header-link-title"><%= @by %></span>
+        <p class="reddit-embed-link-meta"><%= @title %></p>
+    </div>
+    <div class="reddit-embed-content">
+        <div class="reddit-embed-comment-body">
+            <%= raw @content %>
+        </div>
+        <div class="reddit-embed-content-copyright">Powered by sharelike.pro</div>
+    </div>
+</div>
+</body>
+</html>

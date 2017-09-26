@@ -1,0 +1,53 @@
+<div class="landing-hero">
+  <div class="text-center">
+    <div class="center-block">
+      <img src="/images/icon256.png" alt="" width="128" class="img">
+    </div>
+
+    <h1>Share Like Pro</h1>
+    <p class="lead">
+      Share comments from your favorite discussion platforms on Twitter, <span class="highlight">Medium</span>-style<br>
+      Works with Reddit, HackerNews</p>
+    <p>
+      <a href="https://chrome.google.com/webstore/detail/sharelikepro/cfjjjoihghllmlnecjclcfolnhjffhae" class="btn btn-success btn-lg">
+        <img src="/images/chrome_icon.png" width="30"> Install Chrome Extension
+      </a>
+    </p>
+    <p><small>No registration required, no money, no nothing!</small></p>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="text-center">Why bother?</h2>
+  <p class="lead text-center"><a href="https://blog.twitter.com/2015/tweettip-use-photos-to-drive-engagement" target="_blank">Twitter research</a> shows that
+    tweets with pictures get 313% more engagement. Not too shabby!</p>
+  <h2 class="text-center">How does it work?</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Once you've installed the plugin you can:</p>
+      <ol>
+        <li>Click on a "Share like Pro" link under your favorite comment</li>
+        <li>Enter optional message to go along with your tweet</li>
+        <li>Profit! 😎</li>
+      </ol>
+    </div>
+    <div class="col-md-6">
+      <img src="/images/after.png" alt="" class="img img-responsive">
+    </div>
+  </div>
+
+
+  <div class="text-center">
+    <h2 class="text-center">Sounds good?</h2>
+    <p class="lead">Install extension now and start sharing like a pro!</p>
+    <p>
+      <a href="https://chrome.google.com/webstore/detail/sharelikepro/cfjjjoihghllmlnecjclcfolnhjffhae" class="btn btn-success btn-lg cta">
+        <img src="/images/chrome_icon.png" width="30"> Install Chrome Extension
+      </a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p class="text-center">Made with <span class="heart">❤️</span> by <a href="https://twitter.com/koss_lebedev" target="_blank">koss.lebedev</a></p>
+</footer>
