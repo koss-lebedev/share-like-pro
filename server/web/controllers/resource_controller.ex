@@ -7,7 +7,7 @@ defmodule Commently.ResourceController do
   # Renders image for Reddit
   #
   def show(conn, %{"resource" => "reddit", "path" => path}) do
-    render(conn, "show.html", get_reddit_info(path))
+    render(conn, "show.html", Commently.RedditParser.parse(path))
   end
 
   #
@@ -101,18 +101,6 @@ defmodule Commently.ResourceController do
     by = Floki.find(response.body, ".hnuser") |> Floki.text
 
     %{ title: title, content: text, by: by, image: "http://www.ycombinator.com/images/ycombinator-logo-fb889e2e.png" }
-  end
-
-  defp get_reddit_info(path) do
-    url = "https://www.reddit.com/r/" <> Enum.join(path, "/")
-    { :ok, response } = HTTPoison.get(url, [], [follow_redirect: true, timeout: 10_000])
-    resource = Floki.find(response.body, ".nestedlisting .entry") |> List.first
-
-    title = Floki.find(response.body, ".title.may-blank") |> Floki.text
-    text = Floki.find(resource, ".usertext-body") |> Floki.raw_html
-    by = Floki.find(resource, ".author") |> Floki.text
-
-    %{ title: title, content: text, by: by, image: "https://www.redditstatic.com/circled-snoo-1x.png" }
   end
 
 end
